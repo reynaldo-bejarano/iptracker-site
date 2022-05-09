@@ -1,0 +1,232 @@
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(0, 0%, 17%);
+  --second-color: hsl(0, 0%, 59%);
+  --body-color: #118ab2;
+  --white: #ffffff;
+  /*==== Font and typography ====*/
+  --body-font: "Rubik", sans-serif;
+  --h1-font-size: 24px;
+  --h2-font-size: 20px;
+  --h3-font-size: 16px;
+  --normal-font-size: 15.008px;
+  --small-font-size: 13.008;
+  --smaller-font-size: 12px;
+  /*======== Font weight ========*/
+  --font-medium: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========= Margenes ==========*/
+  --border-radius: 8px;
+  --input-height: 48px;
+  --mb-8: 8px;
+  --mb-16: 16px;
+  --mb-24: 24px;
+  --mb-32: 32px;
+  --mb-40: 40px;
+  --mb-48: 48px;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*======================== BASE ======================*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  line-height: 1.6;
+  height: 100vh;
+  margin: 0;
+
+
+  
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  hr {
+    visibility: visible;
+    color: var(--second-color);
+    height: 60px;
+    font-weight: 100;
+  }
+}
+/*======================== LAYOUT ======================*/
+.body {
+  position: relative;
+  height: 100vh;
+}
+
+.bd-grid {
+  display: grid;
+  gap: 2;
+}
+
+/*======================== HEADER ======================*/
+.header {
+  height: 40vh;
+  background: url(../images/pattern-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--mb-16);
+}
+.header__title {
+  color: var(--white);
+  margin-bottom: var(--mb-16);
+}
+.header__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--input-height);
+  width: 90%;
+  position: relative;
+}
+.header__input-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  padding: 24px;
+}
+.header__input-input:hover {
+  cursor: pointer;
+}
+.header__input-btn {
+  height: 100%;
+  width: 10%;
+  background-color: var(--first-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+.header__input-btn:hover {
+  cursor: pointer;
+}
+.header__input-btn-icon {
+  color: var(--white);
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__input {
+    width: 40%;
+  }
+}
+/*======================== BANNER ======================*/
+.card {
+  max-width: 1024px;
+  width: calc(100% - 48px);
+  margin-left: var(--mb-24);
+  margin-right: var(--mb-24);
+  background-color: var(--white);
+  padding: var(--mb-24);
+  border-radius: var(--border-radius);
+  position: absolute;
+  top: 18vh;
+  left: 0vh;
+  z-index: var(--z-fixed);
+}
+
+.banner__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+}
+.banner__title {
+  color: var(--second-color);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+}
+.banner__text {
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+  text-transform: uppercase;
+  margin-bottom: var(--mb-8);
+}
+
+@media only screen and (max-width: 767px) {
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner__data {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    top: 33vh;
+    left: 2vh;
+  }
+
+  .banner__content {
+    padding: 8px 16px;
+  }
+
+  .banner__data {
+    width: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    top: 30vh;
+    left: 30vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .card {
+    top: 30vh;
+    left: 40vh;
+  }
+}
+/*======================== MAP ======================*/
+.map {
+  height: 60vh;
+  width: 100%;
+  z-index: var(--z-tooltip);
+}
+
+/*# sourceMappingURL=styles.css.map */
