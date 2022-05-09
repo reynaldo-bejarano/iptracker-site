@@ -6,6 +6,7 @@
   --white: #ffffff;
   /*==== Font and typography ====*/
   --body-font: "Rubik", sans-serif;
+  --biggest-font-size: 48px;
   --h1-font-size: 24px;
   --h2-font-size: 20px;
   --h3-font-size: 16px;
@@ -100,7 +101,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: var(--mb-16);
+  margin-top: 5%;
 }
 .header__title {
   color: var(--white);
@@ -223,6 +224,41 @@ hr {
   .card {
     top: 30vh;
     left: 40vh;
+  }
+}
+@media only screen and (min-width: 3072px) {
+  .header__title {
+    font-size: var(--biggest-font-size);
+  }
+  .header__input {
+    height: 100px;
+  }
+  .header__input-input {
+    font-size: var(--h1-font-size);
+  }
+
+  .card {
+    max-width: 1920px;
+    top: 35vh;
+    left: 30vh;
+  }
+
+  .banner__title {
+    font-size: var(--h3-font-size);
+  }
+  .banner__text {
+    font-size: var(--h1-font-size);
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .card {
+    max-width: 2200px;
+    top: 35vh;
+    left: 37vh;
+  }
+
+  .banner__text {
+    font-size: var(--biggest-font-size);
   }
 }
 /*======================== MAP ======================*/

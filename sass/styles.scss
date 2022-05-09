@@ -6,7 +6,7 @@
   --white: #ffffff;
   /*==== Font and typography ====*/
   --body-font: "Rubik", sans-serif;
-
+  --biggest-font-size: 48px;
   --h1-font-size: 24px;
   --h2-font-size: 20px;
   --h3-font-size: 16px;
@@ -45,7 +45,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color) ;
+  background-color: var(--body-color);
   line-height: 1.6;
   height: 100vh;
   margin: 0;
@@ -102,7 +102,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: var(--mb-16);
+    margin-top: 5%;
   }
   &__title {
     color: var(--white);
@@ -189,8 +189,6 @@ hr {
   }
 }
 
-
-
 @media only screen and (max-width: 767px) {
   .banner {
     &__content {
@@ -205,12 +203,10 @@ hr {
 }
 
 @media only screen and (max-width: 320px) {
-
   .card {
     top: 25vh;
     left: 0vh;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -242,6 +238,46 @@ hr {
   }
 }
 
+@media only screen and (min-width: 3072px) {
+  .header {
+  
+    &__title {
+      font-size: var(--biggest-font-size);
+    }
+    &__input {
+      height: 100px;
+      &-input {
+        font-size: var(--h1-font-size);
+      }
+    }
+  }
+  .card {
+    max-width: 1920px;
+    top: 35vh;
+    left: 30vh;
+  }
+  .banner {
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+    &__text {
+      font-size: var(--h1-font-size);
+    }
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .card {
+    max-width: 2200px;
+    top: 35vh;
+    left: 37vh;
+  }
+  .banner {
+    &__text {
+      font-size: var(--biggest-font-size);
+    }
+  }
+}
 /*======================== MAP ======================*/
 .map {
   height: 60vh;
