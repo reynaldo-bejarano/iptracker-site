@@ -48,9 +48,6 @@ body {
   line-height: 1.6;
   height: 100vh;
   margin: 0;
-
-
-  
 }
 
 h1,
@@ -192,6 +189,12 @@ hr {
   }
   .banner__data {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .card {
+    top: 25vh;
+    left: 0vh;
   }
 }
 @media only screen and (min-width: 768px) {

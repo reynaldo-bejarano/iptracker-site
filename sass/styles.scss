@@ -95,7 +95,9 @@ hr {
 
 .header {
   height: 40vh;
-
+  background: url(../images/pattern-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   &__content {
     display: flex;
     flex-direction: column;
@@ -187,6 +189,8 @@ hr {
   }
 }
 
+
+
 @media only screen and (max-width: 767px) {
   .banner {
     &__content {
@@ -198,6 +202,15 @@ hr {
       text-align: center;
     }
   }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .card {
+    top: 25vh;
+    left: 0vh;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
